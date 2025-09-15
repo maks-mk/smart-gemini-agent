@@ -1,0 +1,20 @@
+# Core dependencies
+asyncio-compat>=0.1.0
+python-dotenv>=1.0.0
+pathlib>=1.0.1
+
+# AI and LangChain
+langchain-google-genai>=1.0.0
+langchain-mcp-adapters>=0.1.0
+langchain-core>=0.1.0
+langgraph>=0.1.0
+
+# Rich terminal interface
+rich>=13.0.0
+
+# Data handling
+pydantic>=2.0.0
+
+# Optional MCP servers (install separately)
+# duckduckgo-mcp-server  # pip install duckduckgo-mcp-server
+# mcp-server-fetch       # pip install mcp-server-fetch

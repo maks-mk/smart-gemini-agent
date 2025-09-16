@@ -1,0 +1,62 @@
+{
+  "filesystem": {
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "{filesystem_path}"],
+    "transport": "stdio"
+  },
+  "duckduckgo": {
+    "command": "uvx",
+    "args": ["duckduckgo-mcp-server"],
+    "transport": "stdio"
+  },
+  "fetch": {
+    "command": "uvx",
+    "args": ["mcp-server-fetch"],
+    "transport": "stdio"
+  },
+  "git": {
+    "command": "uvx",
+    "args": ["mcp-server-git", "--repository", "{filesystem_path}"],
+    "transport": "stdio"
+  },
+  "sqlite": {
+    "command": "uvx",
+    "args": ["mcp-server-sqlite", "--db-path", "{filesystem_path}/database.db"],
+    "transport": "stdio"
+  },
+  "postgres": {
+    "command": "uvx",
+    "args": ["mcp-server-postgres", "--connection-string", "postgresql://user:pass@localhost/db"],
+    "transport": "stdio"
+  },
+  "brave_search": {
+    "command": "uvx",
+    "args": ["mcp-server-brave-search"],
+    "transport": "stdio",
+    "env": {
+      "BRAVE_API_KEY": "your_brave_api_key_here"
+    }
+  },
+  "github": {
+    "command": "uvx",
+    "args": ["mcp-server-github"],
+    "transport": "stdio",
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
+    }
+  },
+  "aws": {
+    "command": "uvx",
+    "args": ["mcp-server-aws"],
+    "transport": "stdio",
+    "env": {
+      "AWS_ACCESS_KEY_ID": "your_aws_key",
+      "AWS_SECRET_ACCESS_KEY": "your_aws_secret"
+    }
+  },
+  "docker": {
+    "command": "uvx",
+    "args": ["mcp-server-docker"],
+    "transport": "stdio"
+  }
+}
